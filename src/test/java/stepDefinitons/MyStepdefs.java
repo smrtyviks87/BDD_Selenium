@@ -95,23 +95,22 @@ public class MyStepdefs {
     public void iShouldSeeTheTimerIsStarted(String arg0) throws Throwable {
         String expectedtxt,actualtxt;
 
-        int actualcountdown;
+        int actualcountdown,countdownval;
 
         Assert.assertTrue(driver.findElement(txtCountdown).isDisplayed());
         expectedtxt=arg0;
         actualtxt=driver.findElement(txtCountdown).getText();
         Assert.assertEquals(expectedtxt,actualtxt);
-        int countdownval=Integer.parseInt(driver.findElement(txtCountdown).getText().substring(0,2).trim());
+        actualcountdown=Integer.parseInt(driver.findElement(txtCountdown).getText().substring(0,2).trim());
+        countdownval=actualcountdown;
         while(countdownval>0){
-            String actualtext=driver.findElement(txtCountdown).getText();
-            actualcountdown=Integer.parseInt(driver.findElement(txtCountdown).getText().substring(0,2).trim());
-
-            if(actualcountdown == 1){
+            actualtxt=driver.findElement(txtCountdown).getText();
+            if(countdownval == 1){
                 expectedtxt= countdownval+" second";
             }else{
                 expectedtxt= countdownval+" seconds";
             }
-           Assert.assertEquals(expectedtxt,actualtext);
+           Assert.assertEquals(expectedtxt,actualtxt);
             countdownval=actualcountdown;
             TimeUnit.SECONDS.sleep(1);
             countdownval=countdownval-1;
