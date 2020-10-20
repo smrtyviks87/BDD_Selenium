@@ -93,16 +93,15 @@ public class MyStepdefs {
 
     @Then("I should see the timer is started {string}")
     public void iShouldSeeTheTimerIsStarted(String arg0) throws Throwable {
-        String expectedtxt;
+        String expectedtxt,actualtxt;
 
         int actualcountdown;
 
         Assert.assertTrue(driver.findElement(txtCountdown).isDisplayed());
-
+        expectedtxt=arg0;
+        actualtxt=driver.findElement(txtCountdown).getText();
+        Assert.assertEquals(expectedtxt,actualtxt);
         int countdownval=Integer.parseInt(driver.findElement(txtCountdown).getText().substring(0,2).trim());
-
-
-
         while(countdownval>0){
             String actualtext=driver.findElement(txtCountdown).getText();
             actualcountdown=Integer.parseInt(driver.findElement(txtCountdown).getText().substring(0,2).trim());
