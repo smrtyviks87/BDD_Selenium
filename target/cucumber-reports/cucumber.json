@@ -1,0 +1,265 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-10-28T14:21:06.345Z",
+        "before": [
+          {
+            "result": {
+              "duration": 7454434200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Utility.Hook.setUp()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Countdown Positive Flow",
+        "description": "",
+        "id": "countdown-functionality;countdown-positive-flow;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 655612900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Utility.Hook.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1498755900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I am on the eggtimer application",
+            "match": {
+              "location": "stepDefinitons.MyStepdefs.i_am_on_the_eggtimer_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 40019300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I See Input field for period",
+            "match": {
+              "location": "stepDefinitons.MyStepdefs.iSeeInputFieldForPeriod()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 58674900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I see a button \"GO!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GO!\"",
+                  "offset": 15
+                }
+              ],
+              "location": "stepDefinitons.MyStepdefs.iSeeAButton(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 74725500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I Enter valid period \"25 seconds\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"25 seconds\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinitons.MyStepdefs.iEnterValidPeriod(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 919815200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I Click Go Button",
+            "match": {
+              "location": "stepDefinitons.MyStepdefs.iClickGoButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected [19 seconds] but found [18 seconds]\r\n\tat org.testng.Assert.fail(Assert.java:94)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:513)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:135)\r\n\tat org.testng.Assert.assertEquals(Assert.java:116)\r\n\tat org.testng.Assert.assertEquals(Assert.java:190)\r\n\tat org.testng.Assert.assertEquals(Assert.java:200)\r\n\tat stepDefinitons.MyStepdefs.iShouldSeeTheTimerIsStarted(MyStepdefs.java:111)\r\n\tat ✽.I should see the timer is started \"25 seconds\"(file:///C:/Users/M88427/Documents/GitHub/BDD_Selenium/src/test/java/features/Countdown.feature:11)\r\n",
+              "duration": 6148467400,
+              "status": "failed"
+            },
+            "line": 11,
+            "name": "I should see the timer is started \"25 seconds\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"25 seconds\"",
+                  "offset": 34
+                }
+              ],
+              "location": "stepDefinitons.MyStepdefs.iShouldSeeTheTimerIsStarted(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@web"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-28T14:21:23.212Z",
+        "before": [
+          {
+            "result": {
+              "duration": 5352637000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Utility.Hook.setUp()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "Countdown Negative Flow",
+        "description": "",
+        "id": "countdown-functionality;countdown-negative-flow;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 637685700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Utility.Hook.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1076473200,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I am on the eggtimer application",
+            "match": {
+              "location": "stepDefinitons.MyStepdefs.i_am_on_the_eggtimer_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 24012000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I See Input field for period",
+            "match": {
+              "location": "stepDefinitons.MyStepdefs.iSeeInputFieldForPeriod()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 40019100,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I see a button \"GO!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GO!\"",
+                  "offset": 15
+                }
+              ],
+              "location": "stepDefinitons.MyStepdefs.iSeeAButton(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 80041100,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I Enter invalid period \"1,25 seconds\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1,25 seconds\"",
+                  "offset": 23
+                }
+              ],
+              "location": "stepDefinitons.MyStepdefs.iEnterInvalidPeriod(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 877295200,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I Click Go Button",
+            "match": {
+              "location": "stepDefinitons.MyStepdefs.iClickGoButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Time Expired!}\n  (Session info: chrome\u003d86.0.4240.111): Time Expired!\nBuild info: version: \u00274.0.0-alpha-6\u0027, revision: \u00275f43a29cfc\u0027\nSystem info: host: \u0027W7N15053\u0027, ip: \u002710.72.200.128\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002713.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\\Users\\M88427\\AppData\\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:60249}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 5d5c8d0d0e4d20e4b948463491998505\n*** Element info: {Using\u003dxpath, value\u003d//*[contains(., \u0027Enter valid period\u0027)]}\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:127)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:394)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)\r\n\tat stepDefinitons.MyStepdefs.iShouldBeAskedToEnterValidPeriod(MyStepdefs.java:79)\r\n\tat ✽.I should be asked to enter valid period(file:///C:/Users/M88427/Documents/GitHub/BDD_Selenium/src/test/java/features/Countdown.feature:22)\r\n",
+              "duration": 7998400,
+              "status": "failed"
+            },
+            "line": 22,
+            "name": "I should be asked to enter valid period",
+            "match": {
+              "location": "stepDefinitons.MyStepdefs.iShouldBeAskedToEnterValidPeriod()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@web"
+          }
+        ]
+      }
+    ],
+    "name": "Countdown Functionality",
+    "description": "  This feature would be able to provide countdown timer for period specified",
+    "id": "countdown-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/Countdown.feature",
+    "tags": []
+  }
+]

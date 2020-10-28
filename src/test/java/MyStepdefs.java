@@ -49,8 +49,8 @@ public class MyStepdefs {
 
     @And("I See Input field for period")
     public void iSeeInputFieldForPeriod() {
-    Assert.assertTrue(driver.findElement(txtStarttimer).isDisplayed());
-     }
+        Assert.assertTrue(driver.findElement(txtStarttimer).isDisplayed());
+    }
 
     @And("I see a button {string}")
     public void iSeeAButton(String arg0) {
@@ -65,7 +65,7 @@ public class MyStepdefs {
     public void iEnterInvalidPeriod(String arg0) {
         driver.findElement(txtStarttimer).clear();
         driver.findElement(txtStarttimer).sendKeys(arg0);
-            }
+    }
 
     @And("I Click Go Button")
     public void iClickGoButton() {
@@ -108,7 +108,7 @@ public class MyStepdefs {
             }
             System.out.print("actual:"+actualtxt);
             System.out.print("expected:"+expectedtxt);
-           Assert.assertEquals(actualtxt,expectedtxt);
+            Assert.assertEquals(actualtxt,expectedtxt);
 
             TimeUnit.SECONDS.sleep(1);
             countdownval=countdownval-1;
@@ -117,3 +117,4 @@ public class MyStepdefs {
 
     }
 }
+
