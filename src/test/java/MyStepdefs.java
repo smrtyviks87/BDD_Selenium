@@ -49,8 +49,8 @@ public class MyStepdefs {
 
     @And("I See Input field for period")
     public void iSeeInputFieldForPeriod() {
-    Assert.assertTrue(driver.findElement(txtStarttimer).isDisplayed());
-     }
+        Assert.assertTrue(driver.findElement(txtStarttimer).isDisplayed());
+    }
 
     @And("I see a button {string}")
     public void iSeeAButton(String arg0) {
@@ -65,7 +65,7 @@ public class MyStepdefs {
     public void iEnterInvalidPeriod(String arg0) {
         driver.findElement(txtStarttimer).clear();
         driver.findElement(txtStarttimer).sendKeys(arg0);
-            }
+    }
 
     @And("I Click Go Button")
     public void iClickGoButton() {
@@ -93,27 +93,23 @@ public class MyStepdefs {
 
     @Then("I should see the timer is started {string}")
     public void iShouldSeeTheTimerIsStarted(String arg0) throws Throwable {
-        String expectedtxt;
+        String expectedtxt,actualtxt;
 
-        int actualcountdown;
-
+        int actualcountdown,countdownval;
         Assert.assertTrue(driver.findElement(txtCountdown).isDisplayed());
-
-        int countdownval=Integer.parseInt(driver.findElement(txtCountdown).getText().substring(0,2).trim());
-
-
-
+        countdownval=Integer.parseInt(arg0.substring(0,2).trim());
         while(countdownval>0){
-            String actualtext=driver.findElement(txtCountdown).getText();
-            actualcountdown=Integer.parseInt(driver.findElement(txtCountdown).getText().substring(0,2).trim());
 
-            if(actualcountdown == 1){
+            actualtxt=driver.findElement(txtCountdown).getText();
+            if(countdownval == 1){
                 expectedtxt= countdownval+" second";
             }else{
                 expectedtxt= countdownval+" seconds";
             }
-           Assert.assertEquals(expectedtxt,actualtext);
-            countdownval=actualcountdown;
+            System.out.print("actual:"+actualtxt);
+            System.out.print("expected:"+expectedtxt);
+            Assert.assertEquals(actualtxt,expectedtxt);
+
             TimeUnit.SECONDS.sleep(1);
             countdownval=countdownval-1;
         }
@@ -121,3 +117,4 @@ public class MyStepdefs {
 
     }
 }
+
